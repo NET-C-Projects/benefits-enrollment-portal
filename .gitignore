@@ -1,0 +1,110 @@
+#################################################
+# GENERAL
+#################################################
+
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+*.log
+
+#################################################
+# IDE / EDITORS
+#################################################
+
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+#################################################
+# GIT / OS
+#################################################
+
+*.swp
+*.bak
+
+#################################################
+# BACKEND (.NET / ASP.NET CORE)
+#################################################
+
+backend/**/bin/
+backend/**/obj/
+backend/**/TestResults/
+backend/**/publish/
+
+# Rider / VS caches
+backend/**/.vs/
+
+# User-specific settings
+backend/**/*.user
+backend/**/*.rsuser
+
+#################################################
+# BACKEND SECRETS / LOCAL CONFIG
+#################################################
+
+# Local environment overrides
+backend/**/appsettings.Development.json
+backend/**/appsettings.Local.json
+backend/**/secrets.json
+
+# Certificates / keys
+backend/**/*.pfx
+backend/**/*.key
+backend/**/*.pem
+
+#################################################
+# FRONTEND (ANGULAR / NODE)
+#################################################
+
+frontend/**/node_modules/
+frontend/**/dist/
+frontend/**/.angular/
+frontend/**/coverage/
+frontend/**/.cache/
+frontend/**/tmp/
+
+# npm / yarn logs
+frontend/**/npm-debug.log*
+frontend/**/yarn-debug.log*
+frontend/**/yarn-error.log*
+frontend/**/pnpm-debug.log*
+
+#################################################
+# FRONTEND LOCAL ENVIRONMENT / SECRETS
+#################################################
+
+# Local-only environment files
+frontend/**/src/environments/environment.local.ts
+frontend/**/src/environments/environment.development.local.ts
+
+# Optional secret config patterns
+frontend/**/*.local.ts
+frontend/**/*.secret.ts
+
+#################################################
+# DATABASE / LOCAL FILES
+#################################################
+
+*.mdf
+*.ldf
+*.sqlite
+*.db
+
+#################################################
+# TEST / REPORT OUTPUT
+#################################################
+
+coverage/
+reports/
+artifacts/
+
+#################################################
+# PACKAGE LOCK DECISION
+#################################################
+
+# Keep package-lock.json tracked for consistent installs
+# Do NOT ignore package-lock.json
