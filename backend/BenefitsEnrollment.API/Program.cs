@@ -1,5 +1,7 @@
 
+using BenefitsEnrollment.API.Middleware;
 using BenefitsEnrollment.Infrastructure.DependencyInjection;
+using Serilog;
 
 namespace BenefitsEnrollment.API
 {
@@ -7,7 +9,14 @@ namespace BenefitsEnrollment.API
     {
         public static void Main(string[] args)
         {
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.Console()
+                .CreateLogger();
+
             var builder = WebApplication.CreateBuilder(args);
+
+            // Using serilog as an logging provider
+            builder.Host.UseSerilog();
 
             // Add services to the container.
 
@@ -22,6 +31,10 @@ namespace BenefitsEnrollment.API
             builder.Services.AddInfrastructureServices(builder.Configuration);
 
             var app = builder.Build();
+
+            app.UseMiddleware<ExceptionMiddleware>();
+            app.UseSerilogRequestLogging();
+
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
