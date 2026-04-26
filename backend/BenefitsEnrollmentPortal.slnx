@@ -1,3 +1,6 @@
 <Solution>
   <Project Path="BenefitsEnrollment.API\BenefitsEnrollment.API.csproj" />
+  <Project Path="BenefitsEnrollment.Application/BenefitsEnrollment.Application.csproj" Id="fdd4f945-0ee8-4a83-8012-1fcc1df369fb" />
+  <Project Path="BenefitsEnrollment.Domain/BenefitsEnrollment.Domain.csproj" Id="2bfa32a9-527a-4c75-bd5c-5e318379e282" />
+  <Project Path="BenefitsEnrollment.Infrastructure/BenefitsEnrollment.Infrastructure.csproj" Id="bd9f04ac-ef85-469d-8513-00bffb91cb49" />
 </Solution>
